@@ -4,9 +4,9 @@
 
 - 🔭 I’m currently working for [Upvantage](https://upvantage.ae/)
 
-- 🌱 I’m currently learning Backend development with Node.js , Express.js, and MongoDB
-
 - 💬 Ask me about **Frontend Development using React.js / Next.js**
+
+- 🌱 I’m currently learning **Backend Development with Node.js , Express.js, and MongoDB**
 
 - 📫 How to reach me **medohmada1623@gmail.com**
 
