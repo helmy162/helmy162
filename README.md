@@ -44,8 +44,6 @@
 <a href="https://stripe.com/docs" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/1280px-Stripe_Logo%2C_revised_2016.svg.png" alt="Stripe" width="auto" height="40"/> </a> 
  </div>
 &nbsp;&nbsp;
-<p><img align="center" src="https://github-readme-stats.vercel.app/api?username=helmy162&show_icons=true&locale=en" alt="helmy162" /></p>
-&nbsp;&nbsp;
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=helmy162&" alt="helmy162" /></p>
 
 ![](https://komarev.com/ghpvc/?username=helmy162)
