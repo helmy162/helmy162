@@ -1,8 +1,8 @@
 <h1 align="center">Hi 👋, I'm Mohamed Abdelmaksoud</h1>
 
-- 🧑‍💻 Currently a Software Engineering Intern at [Microsoft](https://github.com/microsoft).
+- 🧑‍💻 Currently a Software Engineering Intern at [Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft).
 
-- 🚀 The builder of [Stealth Writer](https://stealthwriter.ai/) and [CarsXchange](https://carsxchange.com/)
+- 🚀 The builder of [Stealth Writer](https://stealthwriter.ai/) and [Leadly](https://leadly.sa/)
 
 - 💬 Ask me about **Frontend Development with React.js / Next.js** and my experiences with **building full-stack SaaS applications**.
 
