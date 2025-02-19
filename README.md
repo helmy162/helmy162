@@ -1,8 +1,8 @@
 <h1 align="center">Hi 👋, I'm Mohamed Abdelmaksoud</h1>
 
-- 🧑‍💻 Currently a Software Engineering Intern at [Procore](https://github.com/procore), ex-[Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft).
+- 🧑‍💻 Currently a Software Engineering Intern at [Procore](https://github.com/procore), ex-[Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft)
 
-- 🚀 The builder of [CustomGPT Researcher](https://researcher.customgpt.ai/), [Leadly](https://leadly.sa/), [Prop Metrics](https://www.prop-metrics.com/) and [Stealth Writer](https://stealthwriter.ai/)
+- 🚀 The builder of [CustomGPT Researcher](https://researcher.customgpt.ai/), [Leadly](https://leadly.sa/), [Prop Metrics](https://www.prop-metrics.com/), and [Stealth Writer](https://stealthwriter.ai/)
 
 - 💬 Ask me about **Frontend Development with React.js / Next.js** and my experiences with **building full-stack SaaS applications**.
 
