@@ -4,9 +4,9 @@
 
 - 🚀 The builder of [CustomGPT Researcher](https://researcher.customgpt.ai/), [Leadly](https://leadly.sa/), [Prop Metrics](https://www.prop-metrics.com/), and [Stealth Writer](https://stealthwriter.ai/)
 
-- 💬 Ask me about **Frontend Development with React.js / Next.js** and my experiences with **building full-stack SaaS applications**.
+- 💬 Ask me about **Frontend Development with React.js / Next.js** and my experiences with **building full-stack SaaS applications**
 
-- 🌱 Expanding my backend skills with **Node.js, Express.js, and MongoDB**.
+- 🌱 Expanding my backend skills with **Node.js, Express.js, and MongoDB**
 
 - 📧 Reach out to me at **mohamed@abdelmaksoud.dev**
 
