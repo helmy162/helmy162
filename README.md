@@ -1,14 +1,14 @@
-<h1 align="center">Hi 👋, I'm Mohamed Abdelmaksoud</h1>
+<h1 align="center">Hi 👋, I'm [Mohamed Abdelmaksoud](https://abdelmaksoud.dev/)</h1>
 
-- 🧑‍💻 Currently a Software Engineering Intern at [Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft).
+- 🧑‍💻 Currently a Software Engineering Intern at [Procore](https://github.com/procore), ex-[Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft).
 
-- 🚀 The builder of [Stealth Writer](https://stealthwriter.ai/) and [Leadly](https://leadly.sa/)
+- 🚀 The builder of [CustomGPT Researcher](https://researcher.customgpt.ai/), [Leadly](https://leadly.sa/), [Prop Metrics](https://www.prop-metrics.com/) and [Stealth Writer](https://stealthwriter.ai/)
 
 - 💬 Ask me about **Frontend Development with React.js / Next.js** and my experiences with **building full-stack SaaS applications**.
 
 - 🌱 Expanding my backend skills with **Node.js, Express.js, and MongoDB**.
 
-- 📧 Reach out to me at **medohmada1623@gmail.com**
+- 📧 Reach out to me at **mohamed@abdelmaksoud.dev**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left" style="display:flex; gap: 16px; flex-wrap: wrap;">
