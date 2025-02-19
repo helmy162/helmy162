@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm [Mohamed Abdelmaksoud](https://abdelmaksoud.dev/)</h1>
+<h1 align="center">Hi 👋, I'm Mohamed Abdelmaksoud</h1>
 
 - 🧑‍💻 Currently a Software Engineering Intern at [Procore](https://github.com/procore), ex-[Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft).
 
