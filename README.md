@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Mohamed Abdelmaksoud</h1>
 
-- 🧑‍💻 I'm a Software engineer with a strong focus on Frontend Development and a deep love for Javascript | ex-[Procore](https://github.com/procore), ex-[Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft)
+- 🧑‍💻 I'm a Software engineer at [Procore](https://github.com/procore) with a strong focus on Frontend Development and a deep love for Javascript | ex-[Cluely](https://cluely.com/), ex-[Siemens](https://github.com/siemens), ex-[Microsoft](https://github.com/microsoft)
 
 - Portfolio: [https://abdelmaksoud.dev/](https://abdelmaksoud.dev/)
 
