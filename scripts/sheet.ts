@@ -11,7 +11,7 @@ const ASSETS = join(ROOT, 'assets');
 const uri = (f: string): string =>
   `data:image/svg+xml;base64,${readFileSync(join(ASSETS, f)).toString('base64')}`;
 
-const ORDER = ['hero', 'career', 'capability'];
+const ORDER = ['hero', 'career', 'stack'];
 const names = [
   ...new Set(
     readdirSync(ASSETS)
