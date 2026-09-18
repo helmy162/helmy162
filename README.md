@@ -1,7 +1,17 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-light.svg">
-  <img alt="Mohamed Abdelmaksoud. I build things and ship them. Software engineer at Procore Technologies." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-dark.svg">
-</picture>
+### A. raw table, no width attrs
 
-camo verification branch.
+<table>
+<tr>
+<td><a href="https://stealthwriter.ai"><img alt="StealthWriter" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-stealthwriter-dark.svg"></a></td>
+<td><a href="https://prop-metrics.com"><img alt="Prop Metrics" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-prop-metrics-dark.svg"></a></td>
+</tr>
+</table>
+
+### B. width attribute on img
+
+<a href="https://stealthwriter.ai"><img alt="StealthWriter" width="49%" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-stealthwriter-dark.svg"></a>
+<a href="https://prop-metrics.com"><img alt="Prop Metrics" width="49%" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-prop-metrics-dark.svg"></a>
+
+### C. two plain images, same paragraph
+
+<a href="https://stealthwriter.ai"><img alt="StealthWriter" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-stealthwriter-dark.svg"></a> <a href="https://prop-metrics.com"><img alt="Prop Metrics" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-prop-metrics-dark.svg"></a>

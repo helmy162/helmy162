@@ -10,11 +10,20 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { THEME_LIST, type Theme } from './tokens.js';
 import { hero } from './panels/hero.js';
+import { career } from './panels/career.js';
+import { card } from './panels/work.js';
+import { PRODUCTS } from './data/products.js';
+import { production } from './panels/production.js';
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'assets');
 
 const PANELS: Record<string, (theme: Theme) => string> = {
   hero,
+  career,
+  ...Object.fromEntries(
+    PRODUCTS.map((p) => [`work-${p.id}`, (theme: Theme) => card(p, theme)]),
+  ),
+  production,
 };
 
 function main(): void {
