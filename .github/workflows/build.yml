@@ -1,0 +1,51 @@
+name: build panels
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 06:12 UTC daily. Off the hour, because every cron on the hour queues behind
+    # everyone else's and GitHub runs them late.
+    - cron: '12 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-panels
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Never fails the build. If the network is having a bad day, the previous
+      # status.json stands and the panel keeps its last known good state.
+      - name: Check live products
+        run: npm run check
+        continue-on-error: true
+
+      - name: Render panels and README
+        run: npm run build
+
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: rebuild panels ($(date -u +%Y-%m-%d))"
+          git push

@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Generator for the SVG panels on github.com/helmy162",
   "scripts": {
-    "build": "tsx src/build.ts",
+    "build": "tsx src/build.ts && tsx scripts/readme.ts",
     "check": "tsx scripts/check-live.ts",
     "typecheck": "tsc --noEmit"
   },
