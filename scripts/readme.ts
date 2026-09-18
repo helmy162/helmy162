@@ -45,7 +45,6 @@ const cards = PRODUCTS.map(
     `<a href="${p.url}">\n${picture(
       `work-${p.id}`,
       `${p.title}. ${p.tagline} ${p.figure} ${p.figureLabel}.`,
-      '49%',
     )}\n</a>`,
 );
 

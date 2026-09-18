@@ -58,8 +58,14 @@ export const THEME_LIST: Theme[] = [THEMES.dark, THEMES.light];
 export const LAYOUT = {
   /** Full-bleed panel width. GitHub's profile column is ~880px on desktop. */
   wide: 880,
-  /** Half-width card, for the 2-up work grid. */
-  card: 431,
+  /** Half-width card, for the 2-up work grid.
+
+      Sized so two of them plus the whitespace between still fit GitHub's
+      profile README column, measured at 846px. Staying under that, rather than
+      pinning the images to width="49%", is what lets the pair wrap: side by
+      side on a desktop, and stacked at full column width on a phone, where a
+      forced 49% would otherwise shrink each card to a 150px thumbnail. */
+  card: 415,
   /** Horizontal padding inside a full-bleed panel. */
   gutter: 52,
   /** Corner radius. One scale, held everywhere: 14 panels, 10 cards. */
