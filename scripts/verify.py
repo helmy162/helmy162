@@ -38,10 +38,14 @@ REGIONS = {
         ("names", 100, 96, 700, 26),
         ("dates", 100, 156, 700, 24),
     ],
-    "capability": [
-        ("labels", 52, 44, 170, 300),
-        ("prose", 232, 44, 600, 300),
-        ("stack rule", 60, 400, 700, 120),
+    # Each mark gets its own box, so a missing or misnamed slug is caught
+    # rather than hidden by the seven that did draw.
+    "stack": [
+        (slug, 52 + round(((880 - 104 - 44) / 7) * i) - 2, 40, 48, 48)
+        for i, slug in enumerate(
+            ["typescript", "react", "nextdotjs", "nodedotjs",
+             "postgresql", "supabase", "stripe", "tailwindcss"]
+        )
     ],
 }
 

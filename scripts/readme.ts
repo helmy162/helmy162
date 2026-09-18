@@ -39,7 +39,11 @@ function picture(name: string, alt: string): string {
 }
 
 const careerAlt = CAREER.map((p) => `${p.company} from ${p.since}`).join(', ');
-const capabilityAlt = `${CAPABILITIES.map((c) => `${c.label}. ${c.line}`).join(' ')} Built with ${STACK.map((t) => t.name).join(', ')}.`;
+/* Rendered as Markdown, not as a panel. These are sentences, and a panel puts
+   them in an image that GitHub scales to 309px on a phone, where 19px type
+   arrives as 6.7px. As text they reflow, stay selectable and searchable, and
+   are read properly by a screen reader. */
+const capabilities = CAPABILITIES.map((c) => `**${c.label}** ${c.line}`).join('\n\n');
 
 const readme = `${picture(
   'hero',
@@ -48,7 +52,9 @@ const readme = `${picture(
 
 ${picture('career', `Where I have worked: ${careerAlt}. Currently at Procore.`)}
 
-${picture('capability', capabilityAlt)}
+${capabilities}
+
+${picture('stack', `What I build with: ${STACK.map((t) => t.name).join(', ')}.`)}
 
 Ask me about shipping a SaaS product end to end, or about making a large React
 codebase pleasant to work in. I am deepening the backend side right now, mostly

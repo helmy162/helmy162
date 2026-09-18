@@ -11,14 +11,14 @@ import { dirname, join } from 'node:path';
 import { THEME_LIST, type Theme } from './tokens.js';
 import { hero } from './panels/hero.js';
 import { career } from './panels/career.js';
-import { capability } from './panels/capability.js';
+import { stack } from './panels/stack.js';
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'assets');
 
 const PANELS: Record<string, (theme: Theme) => string> = {
   hero,
   career,
-  capability,
+  stack,
 };
 
 function main(): void {
