@@ -10,27 +10,35 @@
   <img alt="Microsoft from July 2024, Siemens from September 2024, Procore from February 2025, Cluely from September 2025, and Procore again from February 2026." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-dark.svg">
 </picture>
 
-<a href="https://stealthwriter.ai"><picture>
+<a href="https://stealthwriter.ai">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-stealthwriter-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-stealthwriter-light.svg">
   <img alt="StealthWriter. Every word, human. 500K+ monthly users." width="49%" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-stealthwriter-dark.svg">
-</picture></a>
-<a href="https://prop-metrics.com"><picture>
+</picture>
+</a>
+<a href="https://prop-metrics.com">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-prop-metrics-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-prop-metrics-light.svg">
   <img alt="Prop Metrics. Every ZIP code, priced. 134 metrics per ZIP." width="49%" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-prop-metrics-dark.svg">
-</picture></a>
+</picture>
+</a>
 
-<a href="https://researcher.customgpt.ai"><picture>
+<a href="https://researcher.customgpt.ai">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-customgpt-researcher-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-customgpt-researcher-light.svg">
   <img alt="CustomGPT Researcher. Deep research, with receipts. 7 live pipeline steps." width="49%" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-customgpt-researcher-dark.svg">
-</picture></a>
-<a href="https://lr0parser.com"><picture>
+</picture>
+</a>
+<a href="https://lr0parser.com">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-lr0-parser-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-lr0-parser-light.svg">
   <img alt="LR(0) Parser. Parsing, made visible. 500+ students / mo." width="49%" src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/work-lr0-parser-dark.svg">
-</picture></a>
+</picture>
+</a>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/production-dark.svg">

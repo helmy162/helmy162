@@ -19,7 +19,16 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BRANCH = process.env.README_BRANCH ?? 'main';
 const RAW = `https://raw.githubusercontent.com/helmy162/helmy162/${BRANCH}/assets`;
 
-/** Two files and a media query, because an image cannot see the page's theme. */
+/* Two files and a media query, because an image cannot see the page's theme.
+
+   Every tag sits on its own line, and that is load-bearing rather than tidy.
+   A line has to hold one complete tag and nothing else to open a CommonMark
+   HTML block; write `<a href="..."><picture>` together and the line stops
+   qualifying, so the whole thing is parsed as a paragraph instead. Inside a
+   paragraph GitHub's sanitiser drops <picture> and <source>, keeps the fallback
+   <img>, and repoints the <a> at the image file. The result still renders, which
+   is what makes it easy to miss: the card simply stops switching themes and
+   stops linking to the product. */
 function picture(name: string, alt: string, width?: string): string {
   const w = width ? ` width="${width}"` : '';
   return [
@@ -31,12 +40,13 @@ function picture(name: string, alt: string, width?: string): string {
   ].join('\n');
 }
 
-const cards = PRODUCTS.map((p) =>
-  `<a href="${p.url}">${picture(
-    `work-${p.id}`,
-    `${p.title}. ${p.tagline} ${p.figure} ${p.figureLabel}.`,
-    '49%',
-  )}</a>`,
+const cards = PRODUCTS.map(
+  (p) =>
+    `<a href="${p.url}">\n${picture(
+      `work-${p.id}`,
+      `${p.title}. ${p.tagline} ${p.figure} ${p.figureLabel}.`,
+      '49%',
+    )}\n</a>`,
 );
 
 const readme = `${picture(
