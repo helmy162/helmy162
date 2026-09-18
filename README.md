@@ -1,41 +1,41 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/hero-light.svg">
-  <img alt="Mohamed Abdelmaksoud. I build things and ship them. Software engineer at Procore Technologies." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-light.svg">
+  <img alt="Mohamed Abdelmaksoud. I build things and ship them. Software engineer at Procore Technologies." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-dark.svg">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/career-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/career-light.svg">
-  <img alt="Where I have worked: Microsoft from Jul 2024, Siemens from Sep 2024, Procore from Feb 2025, Cluely from Sep 2025, Procore from Feb 2026. Currently at Procore." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/career-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-light.svg">
+  <img alt="Where I have worked: Microsoft from Jul 2024, Siemens from Sep 2024, Procore from Feb 2025, Cluely from Sep 2025, Procore from Feb 2026. Currently at Procore." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-dark.svg">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-frontend-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-frontend-light.svg">
-  <img alt="Frontend. React and Next.js in TypeScript. Design systems, RTL Arabic, and the accessibility work that usually gets skipped." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-frontend-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-frontend-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-frontend-light.svg">
+  <img alt="Frontend. React and Next.js in TypeScript. Design systems, RTL Arabic, and the accessibility work that usually gets skipped." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-frontend-dark.svg">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-full-product-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-full-product-light.svg">
-  <img alt="Full product. Node and Postgres behind it. Stripe billing, metered APIs with rate limits, and the abuse handling a paid product needs." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-full-product-dark.svg">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-testing-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-testing-light.svg">
-  <img alt="Testing. Vitest and Playwright across web, desktop and API. At Cluely that cut test runs by 85 percent." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-testing-dark.svg">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-design-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-design-light.svg">
-  <img alt="Design. I design what I build, in Figma. Brand systems, not just screens." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-design-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-full-product-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-full-product-light.svg">
+  <img alt="Full product. Node and Postgres behind it. Stripe billing, metered APIs with rate limits, and the abuse handling a paid product needs." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-full-product-dark.svg">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/stack-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/stack-light.svg">
-  <img alt="What I build with: TypeScript, React, Next.js, Node.js, PostgreSQL, Supabase, Stripe, Tailwind CSS." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-testing-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-testing-light.svg">
+  <img alt="Testing. Vitest and Playwright across web, desktop and API. At Cluely that cut test runs by 85 percent." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-testing-dark.svg">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-design-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-design-light.svg">
+  <img alt="Design. I design what I build, in Figma. Brand systems, not just screens." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/card-design-dark.svg">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/stack-light.svg">
+  <img alt="What I build with: TypeScript, React, Next.js, Node.js, PostgreSQL, Supabase, Stripe, Tailwind CSS." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/stack-dark.svg">
 </picture>
 
 Ask me about shipping a SaaS product end to end, or about making a large React
