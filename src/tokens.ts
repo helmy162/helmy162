@@ -24,6 +24,9 @@ export interface Theme {
   accent: string;
   /** viridian for small text, which needs more contrast on light. */
   accentText: string;
+  /** the tile a company mark sits on, lifted off the canvas so that marks
+      built for a light background still read. */
+  tile: string;
 }
 
 export const THEMES: Record<ThemeName, Theme> = {
@@ -37,6 +40,7 @@ export const THEMES: Record<ThemeName, Theme> = {
     dim: '#5e686e',
     accent: '#00c4c4',
     accentText: '#00c4c4',
+    tile: '#1b1f21',
   },
   light: {
     name: 'light',
@@ -49,6 +53,7 @@ export const THEMES: Record<ThemeName, Theme> = {
     accent: '#009999',
     // #007a7a per the brand small-text contrast rule in globals.css
     accentText: '#007a7a',
+    tile: '#ffffff',
   },
 };
 

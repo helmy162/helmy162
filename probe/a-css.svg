@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 300 90">
-<style>@keyframes d { to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion: no-preference) {
- .s { stroke-dasharray: 220; stroke-dashoffset: 220; animation: d 0.7s ease-out forwards; } }</style>
-<rect width="300" height="90" fill="#101314" rx="8"/>
-<g transform="translate(10 0) scale(0.8)"><path class="s" d="M 20 78 L 20 42 Q 20 27 33 27 Q 46 27 46 42 L 46 78" stroke="#eef1f0" stroke-width="9" stroke-linecap="round" fill="none"/></g>
-<text x="90" y="52" fill="#98a2a6" font-family="monospace" font-size="15">A css-anim</text></svg>

@@ -110,3 +110,25 @@ export function measure(t: string, spec: TypeSpec): number {
   const raw = font.getAdvanceWidth(t, spec.size, options(spec));
   return t.length > 0 ? raw - (spec.tracking ?? 0) * spec.size : 0;
 }
+
+/** Greedy word wrap. Returns the lines that fit inside `maxWidth`.
+
+    Needed because every glyph is a path: there is no text box to reflow, so the
+    line breaks have to be decided here, at build time, against the same metrics
+    the outlines are generated from. */
+export function wrap(t: string, spec: TypeSpec, maxWidth: number): string[] {
+  const words = t.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+  let line = '';
+  for (const word of words) {
+    const candidate = line ? `${line} ${word}` : word;
+    if (line && measure(candidate, spec) > maxWidth) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = candidate;
+    }
+  }
+  if (line) lines.push(line);
+  return lines;
+}

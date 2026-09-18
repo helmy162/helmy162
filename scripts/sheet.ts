@@ -11,7 +11,7 @@ const ASSETS = join(ROOT, 'assets');
 const uri = (f: string): string =>
   `data:image/svg+xml;base64,${readFileSync(join(ASSETS, f)).toString('base64')}`;
 
-const ORDER = ['hero', 'career', 'work-', 'production'];
+const ORDER = ['hero', 'career', 'capability'];
 const names = [
   ...new Set(
     readdirSync(ASSETS)
@@ -23,7 +23,7 @@ const names = [
   return rank(a) - rank(b) || a.localeCompare(b);
 });
 
-const isCard = (n: string): boolean => n.startsWith('work-');
+const isCard = (): boolean => false;
 
 function stack(theme: 'dark' | 'light'): string {
   const out: string[] = [];
@@ -35,7 +35,7 @@ function stack(theme: 'dark' | 'light'): string {
   };
   for (const n of names) {
     const img = `<img src="${uri(`${n}-${theme}.svg`)}" alt="${n}">`;
-    if (isCard(n)) pending.push(img);
+    if (isCard()) pending.push(img);
     else {
       flush();
       out.push(img);

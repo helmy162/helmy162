@@ -1,12 +1,10 @@
 name: build panels
 
+# No cron. Every panel is derived from files in this repository, so the output
+# only changes when a source file does.
 on:
   push:
     branches: [main]
-  schedule:
-    # 06:12 UTC daily. Off the hour, because every cron on the hour queues behind
-    # everyone else's and GitHub runs them late.
-    - cron: '12 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,12 +27,6 @@ jobs:
 
       - run: npm ci
 
-      # Never fails the build. If the network is having a bad day, the previous
-      # status.json stands and the panel keeps its last known good state.
-      - name: Check live products
-        run: npm run check
-        continue-on-error: true
-
       - name: Render panels and README
         run: npm run build
 
@@ -47,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore: rebuild panels ($(date -u +%Y-%m-%d))"
+          git commit -m "chore: rebuild panels"
           git push

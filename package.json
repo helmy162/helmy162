@@ -5,8 +5,8 @@
   "description": "Generator for the SVG panels on github.com/helmy162",
   "scripts": {
     "build": "tsx src/build.ts && tsx scripts/readme.ts",
-    "check": "tsx scripts/check-live.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "verify": "python3 scripts/verify.py"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
