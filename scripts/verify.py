@@ -21,22 +21,23 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # panel -> [(label, x, y, w, h)] in the panel's own coordinates
 REGIONS = {
-    "hero": [
-        ("monogram", 52, 44, 56, 56),
-        ("rule", 60, 122, 700, 9),
-        ("name", 52, 160, 600, 40),
-        ("tagline", 52, 212, 380, 26),
-        ("role rail", 600, 52, 228, 50),
-    ],
     "career": [
-        ("microsoft tile", 150, 28, 56, 56),
-        ("siemens tile", 305, 28, 56, 56),
-        ("procore tile", 460, 28, 56, 56),
-        ("cluely tile", 615, 28, 56, 56),
-        ("procore tile (current)", 770, 28, 56, 56),
-        ("rule", 60, 130, 700, 9),
-        ("names", 100, 96, 700, 26),
-        ("dates", 100, 156, 700, 24),
+        ("microsoft tile", 148, 28, 58, 58),
+        ("siemens tile", 303, 28, 58, 58),
+        ("procore tile", 458, 28, 58, 58),
+        ("cluely tile", 613, 28, 58, 58),
+        ("procore tile (current)", 768, 28, 58, 58),
+        ("rule", 60, 134, 700, 9),
+        ("names", 100, 98, 700, 26),
+        ("dates", 100, 158, 700, 24),
+    ],
+    # The typing line is the one most likely to break silently: if the loop is
+    # built so the cycle opens empty, a frozen timeline renders a bare cursor.
+    "hero": [
+        ("monogram", 770, 48, 54, 54),
+        ("role pill", 56, 52, 330, 40),
+        ("name", 56, 156, 600, 46),
+        ("typed line", 56, 224, 300, 28),
     ],
     # Each mark gets its own box, so a missing or misnamed slug is caught
     # rather than hidden by the seven that did draw.
@@ -65,7 +66,8 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         tmp = pathlib.Path(tmp)
         for name, regions in REGIONS.items():
-            for theme, bg in (("dark", (5, 6, 7)), ("light", (244, 246, 245))):
+            # Panels keep their own dark surface in both themes.
+            for theme, bg in (("dark", (4, 7, 10)), ("light", (4, 7, 10))):
                 svg = ASSETS / f"{name}-{theme}.svg"
                 if not svg.exists():
                     failures.append(f"{name}-{theme}: missing")

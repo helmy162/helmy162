@@ -1,84 +1,68 @@
-/* Brand tokens, lifted verbatim from the portfolio at abdelmaksoud.dev
-   (app/globals.css + app/ThemeProvider.tsx). The README and the site must
-   never drift: if a value changes there, change it here and rebuild.
+/* Design tokens.
 
-   One accent, locked across every panel. Do not introduce a second. */
+   The viridian and the mA. mark still come from the portfolio at
+   abdelmaksoud.dev, but the palette is deliberately wider than the site's
+   single accent: teal alone on black reads as restrained, and restrained is
+   not what this page is for.
+
+   Panels stay dark in both GitHub themes. The aurora treatment depends on a
+   dark field, so rather than inventing a washed-out light twin, the card keeps
+   its own surface and only its outer edge adapts. */
 
 export type ThemeName = 'dark' | 'light';
 
 export interface Theme {
   name: ThemeName;
-  /** page canvas, --background */
+  /** the card's own surface, dark in both themes */
   canvas: string;
-  /** raised surface, --mae-panel */
+  /** raised surface inside a card */
   panel: string;
-  /** structural hairline, --mae-line */
+  /** outer edge, the only thing that adapts to the host page */
+  edge: string;
   line: string;
-  /** primary text, --foreground / --mae-ink */
   ink: string;
-  /** secondary text, --mae-mut */
   muted: string;
-  /** tertiary text, --mae-dim */
   dim: string;
-  /** viridian. The only accent. --mae-acc */
+  /** primary accent, the portfolio's viridian, brightened for a glowing field */
   accent: string;
-  /** viridian for small text, which needs more contrast on light. */
-  accentText: string;
-  /** the tile a company mark sits on, lifted off the canvas so that marks
-      built for a light background still read. */
-  tile: string;
+  /** the aurora, in order of appearance */
+  aura: [string, string, string];
+  /** strings and highlights */
+  warm: string;
 }
 
+const SHARED = {
+  canvas: '#04070a',
+  panel: '#0c1116',
+  line: '#1b242a',
+  ink: '#ffffff',
+  muted: '#9fb0b4',
+  dim: '#5d6b72',
+  accent: '#00e0d0',
+  aura: ['#00e0d0', '#6d5cff', '#1f8bff'] as [string, string, string],
+  warm: '#ffcc66',
+};
+
 export const THEMES: Record<ThemeName, Theme> = {
-  dark: {
-    name: 'dark',
-    canvas: '#050607',
-    panel: '#101314',
-    line: '#24292d',
-    ink: '#eef1f0',
-    muted: '#98a2a6',
-    dim: '#5e686e',
-    accent: '#00c4c4',
-    accentText: '#00c4c4',
-    tile: '#1b1f21',
-  },
-  light: {
-    name: 'light',
-    canvas: '#f4f6f5',
-    panel: '#fbfcfc',
-    line: '#dce3e1',
-    ink: '#16211f',
-    muted: '#5a6b66',
-    dim: '#5d6f69',
-    accent: '#009999',
-    // #007a7a per the brand small-text contrast rule in globals.css
-    accentText: '#007a7a',
-    tile: '#ffffff',
-  },
+  dark: { name: 'dark', ...SHARED, edge: '#1d272c' },
+  // On a white page the same card needs a softer, lighter rim or it reads as a
+  // hole punched in the page.
+  light: { name: 'light', ...SHARED, edge: '#2c3a41' },
 };
 
 export const THEME_LIST: Theme[] = [THEMES.dark, THEMES.light];
 
-/** Panel geometry. Widths are chosen against GitHub's README column. */
 export const LAYOUT = {
-  /** Full-bleed panel width. GitHub's profile column is ~880px on desktop. */
+  /** GitHub's profile README column measures 846px; panels render near 1:1. */
   wide: 880,
-  /** Half-width card, for the 2-up work grid.
-
-      Sized so two of them plus the whitespace between still fit GitHub's
-      profile README column, measured at 846px. Staying under that, rather than
-      pinning the images to width="49%", is what lets the pair wrap: side by
-      side on a desktop, and stacked at full column width on a phone, where a
-      forced 49% would otherwise shrink each card to a 150px thumbnail. */
+  /** half-width card. Two of these plus the whitespace still fit the column,
+      which is what lets them wrap to full width on a phone instead of being
+      pinned side by side at 150px each. */
   card: 415,
-  /** Horizontal padding inside a full-bleed panel. */
-  gutter: 52,
-  /** Corner radius. One scale, held everywhere: 14 panels, 10 cards. */
-  radiusPanel: 14,
-  radiusCard: 10,
-  /** Minimum on-canvas font size.
-      An 880-wide panel renders at ~350px on GitHub mobile web, a 0.4x scale,
-      so anything below this stops being readable on a phone. Text that cannot
-      meet this bar does not belong in an image. */
+  gutter: 56,
+  radiusPanel: 18,
+  radiusCard: 16,
+  /** An 880 panel renders at 309px on GitHub mobile, a 0.35 scale. Anything
+      below this stops being readable on a phone. */
   minFontSize: 19,
 } as const;

@@ -12,20 +12,22 @@
    Marks keep their real colours. This row is the one place on the page where
    being recognised instantly matters more than palette discipline. */
 
-import { doc, fill, hairline, rect } from '../svg.js';
+import { doc, fill, rect } from '../svg.js';
+import { auroraDefs, auroraField, grain } from '../aurora.js';
 import { measure, text } from '../type.js';
 import { LAYOUT, type Theme } from '../tokens.js';
 import { CAREER } from '../data/career.js';
 import { companyLogo } from '../logos.js';
 
 const W = LAYOUT.wide;
-const H = 218;
+const H = 222;
+const ID = 'c';
 const PAD = LAYOUT.gutter;
 const TRACK = W - PAD * 2;
-const TILE = 56;
+const TILE = 58;
 const TILE_Y = 28;
 const LOGO = 38;
-const RULE_Y = 138;
+const RULE_Y = 142;
 
 export function career(theme: Theme): string {
   const nameSpec = { font: 'displayMedium' as const, size: 21 };
@@ -35,13 +37,19 @@ export function career(theme: Theme): string {
   const stations = CAREER.map((post, i) => {
     const cx = PAD + slot * (i + 0.5);
     const tick = post.current
-      ? `<circle cx="${cx}" cy="${RULE_Y + 0.5}" r="4.5" fill="${theme.accent}"/>`
-      : `<path d="M${cx - 0.5} ${RULE_Y - 4}V${RULE_Y + 5}" stroke="${theme.line}" stroke-width="1"/>`;
+      ? `<circle cx="${cx}" cy="${RULE_Y + 0.5}" r="5" fill="${theme.accent}">` +
+        `<animate attributeName="r" values="5;7;5" dur="2.6s" repeatCount="indefinite"/></circle>`
+      : `<path d="M${cx - 0.5} ${RULE_Y - 4}V${RULE_Y + 5}" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>`;
     return [
       // Every mark here was drawn for a light background, so each sits on a
       // tile rather than straight on the canvas. Without it Procore's near
       // black container disappears into the dark theme entirely.
-      rect(cx - TILE / 2, TILE_Y, TILE, TILE, { fill: theme.tile, rx: 13 }),
+      rect(cx - TILE / 2, TILE_Y, TILE, TILE, { fill: '#ffffff', rx: 15, opacity: 0.93 }),
+      rect(cx - TILE / 2 + 0.5, TILE_Y + 0.5, TILE - 1, TILE - 1, {
+        stroke: '#ffffff',
+        rx: 14.5,
+        opacity: 0.25,
+      }),
       ((size) =>
         `<image x="${cx - size / 2}" y="${TILE_Y + (TILE - size) / 2}" width="${size}"` +
         ` height="${size}" preserveAspectRatio="xMidYMid meet"` +
@@ -53,15 +61,26 @@ export function career(theme: Theme): string {
       tick,
       fill(
         text(post.since, cx - measure(post.since, dateSpec) / 2, 176, dateSpec),
-        post.current ? theme.accentText : theme.dim,
+        post.current ? theme.accent : theme.dim,
       ),
     ].join('');
   }).join('');
 
   const body = [
-    rect(0.5, 0.5, W - 1, H - 1, { fill: theme.canvas, stroke: theme.line, rx: LAYOUT.radiusPanel }),
-    hairline(PAD, RULE_Y, W - PAD, theme.line),
+    `<defs>${auroraDefs(theme, ID)}<clipPath id="${ID}-c">` +
+      `<rect width="${W}" height="${H}" rx="${LAYOUT.radiusPanel}"/></clipPath></defs>`,
+    `<g clip-path="url(#${ID}-c)">`,
+    rect(0, 0, W, H, { fill: theme.canvas }),
+    auroraField(theme, ID, [
+      { cx: 60, cy: 210, rx: 250, ry: 120, hue: 0, opacity: 0.5, dx: 70, dy: -26, dur: 22 },
+      { cx: 520, cy: -30, rx: 280, ry: 130, hue: 2, opacity: 0.45, dx: -60, dy: 34, dur: 27 },
+      { cx: 900, cy: 200, rx: 240, ry: 130, hue: 1, opacity: 0.45, dx: -70, dy: -24, dur: 19 },
+    ]),
+    grain(W, H, ID, 0.05),
+    `<path d="M${PAD} ${RULE_Y + 0.5}H${W - PAD}" stroke="#ffffff" stroke-opacity="0.13"/>`,
     stations,
+    `</g>`,
+    rect(0.5, 0.5, W - 1, H - 1, { stroke: theme.edge, rx: LAYOUT.radiusPanel }),
   ].join('');
 
   const spoken = CAREER.map((p) => `${p.company} from ${p.since}`).join(', ');

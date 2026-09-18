@@ -12,12 +12,17 @@ import { THEME_LIST, type Theme } from './tokens.js';
 import { hero } from './panels/hero.js';
 import { career } from './panels/career.js';
 import { stack } from './panels/stack.js';
+import { bento } from './panels/bento.js';
+import { CAPABILITIES } from './data/capability.js';
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'assets');
 
 const PANELS: Record<string, (theme: Theme) => string> = {
   hero,
   career,
+  ...Object.fromEntries(
+    CAPABILITIES.map((c, i) => [`card-${c.label.toLowerCase().replace(/ /g, '-')}`, bento(c, i)]),
+  ),
   stack,
 };
 

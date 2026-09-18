@@ -39,11 +39,15 @@ function picture(name: string, alt: string): string {
 }
 
 const careerAlt = CAREER.map((p) => `${p.company} from ${p.since}`).join(', ');
-/* Rendered as Markdown, not as a panel. These are sentences, and a panel puts
-   them in an image that GitHub scales to 309px on a phone, where 19px type
-   arrives as 6.7px. As text they reflow, stay selectable and searchable, and
-   are read properly by a screen reader. */
-const capabilities = CAPABILITIES.map((c) => `**${c.label}** ${c.line}`).join('\n\n');
+/* The four capability cards, two per row.
+
+   No width attribute on these: at 415 wide, two plus the whitespace between
+   still fit GitHub's 846px profile column, so they sit side by side on a
+   desktop and wrap to full width on a phone. Pinning them to 49% would keep
+   them side by side at 150px each, where the prose is unreadable. */
+const cards = CAPABILITIES.map((c) =>
+  picture(`card-${c.label.toLowerCase().replace(/ /g, '-')}`, `${c.label}. ${c.line}`),
+);
 
 const readme = `${picture(
   'hero',
@@ -52,7 +56,11 @@ const readme = `${picture(
 
 ${picture('career', `Where I have worked: ${careerAlt}. Currently at Procore.`)}
 
-${capabilities}
+${cards[0]}
+${cards[1]}
+
+${cards[2]}
+${cards[3]}
 
 ${picture('stack', `What I build with: ${STACK.map((t) => t.name).join(', ')}.`)}
 
@@ -77,23 +85,27 @@ portfolio at [abdelmaksoud.dev](https://abdelmaksoud.dev) uses, then draws each
 panel twice, once per theme, so \`<picture>\` can switch between them.
 
 An SVG loaded through \`<img>\` renders in the browser's secure animated mode:
-no script, no interactivity, and no external references of any kind. That last
-one has consequences. It cannot fetch a webfont, so every glyph here is
-converted to a path outline with opentype.js at build time, which is why the
-page renders in Poppins and Fira Code on your machine without downloading
-either. It cannot fetch a logo either, so the company marks are inlined as
-data URIs and the stack marks as raw path data.
+no script, no interactivity, no external references, but declarative animation
+still runs. That shapes everything here. It cannot fetch a webfont, so every
+glyph is converted to a path outline with opentype.js at build time, which is
+why the page renders in Poppins and Fira Code on your machine without
+downloading either. It cannot fetch a logo either, so the company marks are
+inlined as data URIs and the stack marks as raw path data. And line breaks have
+to be decided at build time against the same font metrics the outlines come
+from, since there is no text box left to reflow.
 
-It also means line breaks have to be decided at build time, against the same
-font metrics the outlines come from, since there is no text box left to reflow.
-The panel heights are computed from the wrapped copy rather than fixed, so
-editing a sentence cannot clip a line or leave a gap.
+The motion is all SMIL: drifting gradients, a sweeping sheen, a pulse running
+along the stack, and a line that types itself through three phrases. The typing
+is a clip rectangle stepping through each phrase's cumulative glyph advances,
+with a cursor riding the same numbers.
 
-Nothing on the page moves. A draw-in on the monogram was built first and cut:
-declarative animation is supposed to survive in this mode, but it never
-advanced in any environment I could test, and an animation that does not run
-leaves the mark at \`stroke-dashoffset: 220\`, which is to say invisible. Not
-worth the risk for a flourish.
+One rule governs every animation here. A frozen timeline snaps to an
+animation's *first* value rather than to the element's static attribute, so the
+first value is always the good resting state. The typing loop therefore opens
+with the first phrase already typed and only types it back in at the end of the
+cycle. Built the obvious way round it renders as a bare cursor anywhere the
+timeline does not advance, which is exactly how an earlier version of this page
+managed to hide its own logo.
 
 \`\`\`
 npm install

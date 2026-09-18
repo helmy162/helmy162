@@ -1,27 +1,41 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-light.svg">
-  <img alt="Mohamed Abdelmaksoud. I build things and ship them. Software engineer at Procore Technologies." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/hero-light.svg">
+  <img alt="Mohamed Abdelmaksoud. I build things and ship them. Software engineer at Procore Technologies." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/hero-dark.svg">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-light.svg">
-  <img alt="Where I have worked: Microsoft from Jul 2024, Siemens from Sep 2024, Procore from Feb 2025, Cluely from Sep 2025, Procore from Feb 2026. Currently at Procore." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/career-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/career-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/career-light.svg">
+  <img alt="Where I have worked: Microsoft from Jul 2024, Siemens from Sep 2024, Procore from Feb 2025, Cluely from Sep 2025, Procore from Feb 2026. Currently at Procore." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/career-dark.svg">
 </picture>
 
-**Frontend** React and Next.js in TypeScript. Design systems, RTL Arabic, and the accessibility work that usually gets skipped.
-
-**Full product** Node and Postgres behind it. Stripe billing, metered APIs with rate limits, and the abuse handling a paid product needs.
-
-**Testing** Vitest and Playwright across web, desktop and API. At Cluely that cut test runs by 85 percent.
-
-**Design** I design what I build, in Figma. Brand systems, not just screens.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-frontend-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-frontend-light.svg">
+  <img alt="Frontend. React and Next.js in TypeScript. Design systems, RTL Arabic, and the accessibility work that usually gets skipped." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-frontend-dark.svg">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-full-product-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-full-product-light.svg">
+  <img alt="Full product. Node and Postgres behind it. Stripe billing, metered APIs with rate limits, and the abuse handling a paid product needs." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-full-product-dark.svg">
+</picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/stack-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/stack-light.svg">
-  <img alt="What I build with: TypeScript, React, Next.js, Node.js, PostgreSQL, Supabase, Stripe, Tailwind CSS." src="https://raw.githubusercontent.com/helmy162/helmy162/panels-preview/assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-testing-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-testing-light.svg">
+  <img alt="Testing. Vitest and Playwright across web, desktop and API. At Cluely that cut test runs by 85 percent." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-testing-dark.svg">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-design-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-design-light.svg">
+  <img alt="Design. I design what I build, in Figma. Brand systems, not just screens." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/card-design-dark.svg">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/stack-light.svg">
+  <img alt="What I build with: TypeScript, React, Next.js, Node.js, PostgreSQL, Supabase, Stripe, Tailwind CSS." src="https://raw.githubusercontent.com/helmy162/helmy162/main/assets/stack-dark.svg">
 </picture>
 
 Ask me about shipping a SaaS product end to end, or about making a large React
@@ -45,23 +59,27 @@ portfolio at [abdelmaksoud.dev](https://abdelmaksoud.dev) uses, then draws each
 panel twice, once per theme, so `<picture>` can switch between them.
 
 An SVG loaded through `<img>` renders in the browser's secure animated mode:
-no script, no interactivity, and no external references of any kind. That last
-one has consequences. It cannot fetch a webfont, so every glyph here is
-converted to a path outline with opentype.js at build time, which is why the
-page renders in Poppins and Fira Code on your machine without downloading
-either. It cannot fetch a logo either, so the company marks are inlined as
-data URIs and the stack marks as raw path data.
+no script, no interactivity, no external references, but declarative animation
+still runs. That shapes everything here. It cannot fetch a webfont, so every
+glyph is converted to a path outline with opentype.js at build time, which is
+why the page renders in Poppins and Fira Code on your machine without
+downloading either. It cannot fetch a logo either, so the company marks are
+inlined as data URIs and the stack marks as raw path data. And line breaks have
+to be decided at build time against the same font metrics the outlines come
+from, since there is no text box left to reflow.
 
-It also means line breaks have to be decided at build time, against the same
-font metrics the outlines come from, since there is no text box left to reflow.
-The panel heights are computed from the wrapped copy rather than fixed, so
-editing a sentence cannot clip a line or leave a gap.
+The motion is all SMIL: drifting gradients, a sweeping sheen, a pulse running
+along the stack, and a line that types itself through three phrases. The typing
+is a clip rectangle stepping through each phrase's cumulative glyph advances,
+with a cursor riding the same numbers.
 
-Nothing on the page moves. A draw-in on the monogram was built first and cut:
-declarative animation is supposed to survive in this mode, but it never
-advanced in any environment I could test, and an animation that does not run
-leaves the mark at `stroke-dashoffset: 220`, which is to say invisible. Not
-worth the risk for a flourish.
+One rule governs every animation here. A frozen timeline snaps to an
+animation's *first* value rather than to the element's static attribute, so the
+first value is always the good resting state. The typing loop therefore opens
+with the first phrase already typed and only types it back in at the end of the
+cycle. Built the obvious way round it renders as a bare cursor anywhere the
+timeline does not advance, which is exactly how an earlier version of this page
+managed to hide its own logo.
 
 ```
 npm install
