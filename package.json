@@ -1,0 +1,17 @@
+{
+  "name": "helmy162-profile",
+  "private": true,
+  "type": "module",
+  "description": "Generator for the SVG panels on github.com/helmy162",
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "check": "tsx scripts/check-live.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "opentype.js": "^1.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
