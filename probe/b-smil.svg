@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 300 90">
+<rect width="300" height="90" fill="#101314" rx="8"/>
+<g transform="translate(10 0) scale(0.8)"><path d="M 20 78 L 20 42 Q 20 27 33 27 Q 46 27 46 42 L 46 78" stroke="#eef1f0" stroke-width="9" stroke-linecap="round" fill="none" stroke-dasharray="220">
+<animate attributeName="stroke-dashoffset" values="220;0" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1"/></path></g>
+<text x="90" y="52" fill="#98a2a6" font-family="monospace" font-size="15">B smil</text></svg>
